@@ -6,8 +6,11 @@
   first_name = FFaker::Name.first_name
   last_name = FFaker::Name.last_name
   full_name = first_name + ' ' + last_name
-  email = first_name + '.' + last_name + '@testdata.com'
-  User.create(name: full_name, email: email)
+  email = first_name + '.' + last_name + '@testData.com'
+  User.create(
+    name: full_name,
+    email: email
+  )
 end
 
 # Seed 100 fake Micropost instances
