@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
-ruby '2.7.0'
+
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'bootsnap', '1.7.2', require: false
-gem 'ffaker'
 gem 'jbuilder',   '2.10.0'
 gem 'puma',       '5.3.1'
 gem 'rails',      '6.1.4.1'
 gem 'sass-rails', '6.0.0'
 gem 'turbolinks', '5.2.1'
 gem 'webpacker',  '5.4.0'
+gem 'ffaker'
 
 group :development, :test do
   gem 'byebug',  '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
@@ -18,6 +20,7 @@ group :development, :test do
 end
 
 group :development do
+  ruby '2.7.0'
   gem 'listen',             '3.4.1'
   gem 'rack-mini-profiler', '2.3.1'
   gem 'spring',             '2.1.1'
@@ -31,10 +34,11 @@ group :test do
 end
 
 group :production do
+  ruby '2.7.5'
   gem 'pg', '1.2.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # Uncomment the following line if you're running Rails
 # on a native Windows system:
-# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
